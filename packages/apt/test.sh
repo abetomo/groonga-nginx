@@ -116,9 +116,10 @@ sudo apt install -V -y \
   make \
   ruby-dev
 sudo env MAKEFLAGS=-j$(nproc) gem install \
-  grntest \
+  specific_install \
   pkg-config \
   red-arrow
+sudo gem specific_install -l https://github.com/abetomo/grntest -b debug
 export TZ=Asia/Tokyo
 PATH=/usr/sbin:$PATH
 git clone \
